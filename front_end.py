@@ -5,9 +5,10 @@ def printMeny():
     print("------------------- Kalkulator -------------------")
     print("| 1. Legg sammen (pluss)                         |")
     print("| 2. Trekk fra   (minus)                         |")
-    print("| 3. Gange       (***TODO***)                    |")
-    print("| 4. Dele        (***TODO***)                    |")
-    print("| 5. Avslutt                                     |")
+    print("| 3. Gange       (gange)                         |")
+    print("| 4. Dele        (dele)                          |")
+    print("| 5. Gjennomsnitt                                |")
+    print("| 6. Avslutt                                     |")
     print("--------------------------------------------------")
     menyvalg = input("Velg operasjon fra menyen: ")
     utfoerMenyvalg(menyvalg)
@@ -22,9 +23,14 @@ def utfoerMenyvalg(valgtTall):
         pause_og_fortsett()
     elif valgtTall == "3":
         gange()
+        pause_og_fortsett()
     elif valgtTall == "4":
-        unfinished()
+        dele()
+        pause_og_fortsett()
     elif valgtTall == "5":
+        gjennomsnitt()
+        pause_og_fortsett()
+    elif valgtTall == "6":
         bekreftelse = input("Er du sikker på at du vil avslutte? J/N ")
         if (bekreftelse == "J" or bekreftelse == "j"):
             exit()
@@ -32,7 +38,7 @@ def utfoerMenyvalg(valgtTall):
             printMeny()
     else:
         nyttForsoek = input("*** Ugyldig valg."
-                            "Velg et tall mellom 1-4."
+                            "Velg et tall mellom 1-6."
                             " Trykk for å fortsette *** ")
         printMeny()
 
@@ -40,6 +46,7 @@ def utfoerMenyvalg(valgtTall):
 def pause_og_fortsett():
     input("-- Trykk en tast for å fortsette --")
     printMeny()
+
 
 
 printMeny()
