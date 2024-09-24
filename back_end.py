@@ -20,4 +20,9 @@ def gange():
 
 def skibidi():
     print("skibdi toilet")
-s
+
+def dele():
+    tall1 = input("Skriv inn det første tallet: ")
+    tall2 = input("Skriv inn det andre tallet: ")
+    diff = int(tall1) / int(tall2)
+    print(f'{tall2} / {tall2} = {diff}')
