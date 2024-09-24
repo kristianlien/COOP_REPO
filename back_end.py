@@ -16,3 +16,8 @@ def gange():
     tall2 = input("Skriv inn det andre tallet:")
     produkt = tall1 * tall2
     print(f"{tall1} + {tall2} = {produkt}")
+
+
+def skibidi():
+    print("skibdi toilet")
+s
